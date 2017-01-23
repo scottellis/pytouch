@@ -13,7 +13,7 @@ class TouchWin(QWidget):
         mainLayout = QVBoxLayout()
         
         self.label = QLabel('#')
-        self.label.setStyleSheet('color: red;')
+        self.label.setStyleSheet('font-size: 28pt; color: red;')
         self.btns = []
         self.signalMapper = QSignalMapper(self)
         self.signalMapper.mapped.connect(self.btnClicked)
@@ -91,6 +91,6 @@ if __name__ == '__main__':
     app.setStyleSheet(btnStyle)
 
     win = TouchWin()
-    win.show()
+    win.showFullScreen()
 
     sys.exit(app.exec_())
